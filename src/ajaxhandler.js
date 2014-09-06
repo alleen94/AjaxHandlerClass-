@@ -231,7 +231,7 @@ AjaxHandler.prototype.handleChange = function() {
         var self = this;
         return function(){
             if (( self.xmlhttp.readyState === 4 ) && ( self.xmlhttp.status === 200 )) {
-                console.log("Response received from server.");
+                self.logIf("Response received from server.");
                 self.handleServerResponse();
             }
         };
